@@ -1,0 +1,15 @@
+img {
+    position: relative;
+    border-top-style: solid;
+}
+p {
+    position: absolute;
+}
+img::after {
+    content: "";
+    border-bottom: 2px black;
+    position: absolute;
+    width: 100%;
+    bottom: -5px;
+    left: 0%;
+}
