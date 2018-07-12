@@ -1,15 +1,74 @@
-img {
-    position: relative;
-    border-top-style: solid;
-}
-p {
-    position: absolute;
-}
-img::after {
-    content: "";
-    border-bottom: 2px black;
-    position: absolute;
+#picture {
+    background-image: url(../../../jezioro.jpg);
+    background-repeat: no-repeat;
+    height: 50vh;
     width: 100%;
-    bottom: -5px;
-    left: 0%;
+    position: relative;
+    background-size: cover;
+/*    overflow: hidden;*/
+}
+#inside-picture {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition-duration: 2s;
+    background-size: cover;
+}
+#inside-picture:hover {
+    opacity: 1;
+    transform: scale(2, 2);   
+}
+#container {
+    height: 100vh;
+    width: 40%;
+}
+#picture::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    opacity: 0;
+    transition: 1s;
+    transform: scaleX(0);
+    
+}
+#picture::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    opacity: 0;
+    transition: 1s;
+    transform: scaleX(0);
+   
+}
+#picture:hover:before {
+   width: 100%;
+    height: 100%; 
+    opacity: 1;
+    transform: scaleX(1);
+}
+#picture:hover:after {
+   width: 100%;
+    height: 100%; 
+    opacity: 1;
+    transform: scaleX(1);
 }
