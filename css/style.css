@@ -9,9 +9,9 @@
     position: absolute;
     width: 100,5%;
     height: 51%;
-    bottom: -5px;
-    left:-5px;
-    right: -5px;
+    bottom: -7px;
+    left:-7px;
+    right: -7px;
     border-bottom: 4px solid black;
     border-right: 4px solid black;
     border-left: 4px solid black;
@@ -30,9 +30,9 @@
     content: "";
     position: absolute;
     height: 51%;
-    top: -5px;
-    left:-5px;
-    right: -5px;
+    top: -7px;
+    left:-7px;
+    right: -7px;
     border-top: 4px solid black;
     border-right: 4px solid black;
     border-left: 4px solid black;
@@ -47,4 +47,20 @@
     opacity: 1;
     transform: scaleX(1);
     transition-duration: 4s;
+}
+h1 {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: black;
+    transform: scaleX(0);
+    transition: 2s;
+    text-align: center;
+}
+#picture:hover h1 {
+    transform: scaleX(1);
+    font-size: 3rem;
 }
